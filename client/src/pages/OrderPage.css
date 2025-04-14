@@ -1,0 +1,70 @@
+/* OrderPage.css */
+.order-container {
+  margin: 0 auto;
+  padding-top: 10px;
+  max-width: 1200px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.order-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  gap: 30px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  justify-content: space-around; /* Space out the inputs evenly */
+  align-items: center; /* Align items vertically */
+  flex-wrap: wrap; /* Allow wrapping if not enough space */
+  margin: auto;
+  padding: 10px;
+}
+
+.order-form input, .order-form button {
+  flex: 1; /* Each child will take equal width */
+  margin: 10px; /* Margin for spacing */
+  padding: 12px; /* Padding inside the inputs and button */
+}
+
+.order-form button {
+  background-image: linear-gradient(to right, #1ddb20 0%, #1ddb89 100%); /* Green background */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  outline: none; /* Removes the outline to make it look cleaner */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Soft box shadow for depth */
+}
+
+.order-form button:hover {
+  background-color: #45a049;
+}
+
+.order-form button:active,
+.order-form button:focus {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.order-form button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.main-heading, .sub-heading {
+  font-size: 3em; /* or appropriate sizing */
+  margin-bottom: 0.5em;
+}
+
+.sub-heading {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}

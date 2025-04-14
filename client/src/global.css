@@ -1,0 +1,35 @@
+/* global.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace; /* Helvetica is closer to your design */
+    background-color: #edd1ad;
+    color: #333; /* Dark grey text for better contrast */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fa9c29; /* Example background color */
+  }
+  
+  nav ul li {
+    padding: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #5e3406;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Other global styles */
+  

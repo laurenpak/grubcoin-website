@@ -1,4 +1,3 @@
-import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavigationBar.css';
 
@@ -8,8 +7,8 @@ function NavigationBar() {
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/mint">Mint Late Meal Token</Link></li>
-          <li><Link to="/order">Trade Token</Link></li>
+          <li><Link to="/mint">Redeem Late Meal NFT</Link></li>
+          <li><Link to="/order">Buy/Sell Late Meal NFT</Link></li>
         </ul>
       </nav>
       <div className='spacer' />

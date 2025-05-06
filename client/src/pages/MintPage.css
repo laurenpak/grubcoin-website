@@ -1,4 +1,48 @@
 /* MintNFTPage.css */
+.minted-token-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.token-title {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.token-image-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.base-token {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.overlay-token {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.base-token {
+  z-index: 1;
+}
+
 .mint-container {
   margin: 0 auto;
   padding-top: 10px;
@@ -38,21 +82,26 @@
 }
 
 /* Reuse the same styles for headings */
-.main-heading {
+.main-heading2 {
+  color: #e9851a;
+  font-weight: 700;
+  padding-top: 5%;
   font-size: 3em;
   margin-bottom: 0.5em;
 }
 
-.sub-heading {
-  font-size: 1.5em;
+.sub-heading2 {
+  font-weight: 500;
+  font-size: 2em;
   margin-bottom: 1em;
+  color: #d77f20;
 }
 
 /* MintPage.css additional styles */
 
 /* Button styling for a more professional look */
 .mint-button {
-  background-image: linear-gradient(to right, #1ddb20 0%, #1ddb89 100%); 
+  background-image: linear-gradient(to right, #db7c1d 0%, rgb(189, 97, 12) 100%); 
   color: white;
   padding: 12px 24px;
   border: none;
@@ -91,13 +140,13 @@
 /* ... (existing styles) */
 
 /* Styling for the minted T-shirt container */
-.minted-tshirt-container {
+.minted-token-container {
   text-align: center;
   margin-top: 20px;
 }
 
 /* Styling for the minted T-shirt image */
-.minted-tshirt-image {
+.minted-token-image {
   max-width: 100%; /* Ensures the image is responsive */
   height: auto; /* Maintains the aspect ratio */
   border: 1px solid #ddd; /* Gives the image a slight border */
@@ -107,7 +156,7 @@
 }
 
 /* Styling for the minted T-shirt title */
-.minted-tshirt-container h3 {
+.minted-token-container h3 {
   font-size: 1.5em;
   color: #333;
   margin-bottom: 10px;
@@ -115,7 +164,7 @@
 
 .loader {
   border: 12px solid #f3f3f3; /* Light grey background */
-  border-top: 12px solid #4CAF50; /* Match the mint button green color */
+  border-top: 12px solid #c06618; /* Match the mint button green color */
   border-radius: 50%;
   width: 80px; /* Reduced size */
   height: 80px; /* Keep it a perfect circle */

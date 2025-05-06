@@ -22,7 +22,7 @@ function OrderPage() {
 
   return (
     <div className="order-container">
-      <h1 className="main-heading">Order Your NFT T-Shirt</h1>
+      <h1 className="main-heading2">Buy/Sell Your Late Meal Token</h1>
       <form className="order-form">
         <input 
           type="text" 
@@ -30,21 +30,20 @@ function OrderPage() {
           onChange={(e) => setNftId(e.target.value)}
           placeholder="Enter your NFT ID"
         />
-        <input 
+        {/* <input 
           type="text" 
           name="size" 
           value={orderDetails.size} 
           onChange={handleInputChange}
-          placeholder="T-Shirt Size"
-        />
-        <input 
+        /> */}
+        {/* <input 
           type="text" 
           name="address" 
           value={orderDetails.address} 
           onChange={handleInputChange}
           placeholder="Delivery Address"
-        />
-        <button onClick={handleSubmitOrder}>Submit Order</button>
+        /> */}
+        <button onClick={handleSubmitOrder}>Submit Late Meal NFT</button>
       </form>
       <NFTGrid />
     </div>

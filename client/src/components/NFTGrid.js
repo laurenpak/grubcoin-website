@@ -10,6 +10,12 @@ function NFTGrid() {
       getMyNFTs();
   }, [contract, accounts])
 
+  async function fetchNFTImage(tokenId) {
+    const uri = await contract.methods.tokenURI(tokenId).call();
+    const metadata = await fetch(uri).then(res => res.json());
+    return metadata.image;
+  }
+
   async function getMyNFTs() {
     if (!accounts || accounts?.length <= 0) return;
     let response;
@@ -34,7 +40,7 @@ function NFTGrid() {
       justifyContent: 'center',
       gap: '20px',
       padding: '20px',
-      backgroundColor: '#000000'
+      backgroundColor: 'rgba(230, 218, 212, 0.55)'
     },
     card: {
       width: '300px',
@@ -49,6 +55,7 @@ function NFTGrid() {
       textAlign: 'center'
     },
     image: {
+      color: 'white',
       width: '100%',
       height: 'auto',
       borderRadius: '5px'
@@ -73,7 +80,7 @@ function NFTGrid() {
       fontWeight: 'bold',
       cursor: 'pointer',
       width: '7rem',
-      background: 'linear-gradient(to right, #1ddb20 0%, #1ddb89 100%)'
+      background: 'linear-gradient(to right, #db7c1d 0%, rgb(189, 97, 12) 100%)'
     }
   };
 
@@ -87,8 +94,8 @@ function NFTGrid() {
             <div>Owner: {nft.owner}</div>
           </div>
           <div style={styles.buttonContainer}>
-            <button style={styles.button} onClick={() => console.log(`Order shirt for NFT ID: ${nft.id}`)}>Order Shirt</button>
-            <button style={styles.button} onClick={() => console.log(`Send NFT ID: ${nft.id}`)}>Send</button>
+            <button style={styles.button} onClick={() => console.log(`Order Late Meal for NFT ID: ${nft.id}`)}>Purchase Late Meal</button>
+            <button style={styles.button} onClick={() => console.log(`Send NFT ID: ${nft.id}`)}>Remove Listing</button>
           </div>
         </div>
       ))}

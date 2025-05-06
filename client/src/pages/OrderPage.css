@@ -32,7 +32,7 @@
 }
 
 .order-form button {
-  background-image: linear-gradient(to right, #1ddb20 0%, #1ddb89 100%); /* Green background */
+  background-image: linear-gradient(to right, #db7c1d 0%, rgb(189, 97, 12) 100%);
   color: white;
   padding: 12px 24px;
   border: none;
@@ -45,7 +45,7 @@
 }
 
 .order-form button:hover {
-  background-color: #45a049;
+  background-color: rgb(147, 80, 17) 100%);
 }
 
 .order-form button:active,
